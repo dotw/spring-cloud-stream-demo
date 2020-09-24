@@ -1,0 +1,8 @@
+server.port: 9090
+spring.cloud.stream:
+    function.definition: receive1;receive2;handle1;handle2;
+    bindings:
+        receive1-in-0.destination: customerId-1
+        receive1-in-0.group: customers
+        receive2-in-0.destination: customerId-2
+        receive2-in-0.group: customers
